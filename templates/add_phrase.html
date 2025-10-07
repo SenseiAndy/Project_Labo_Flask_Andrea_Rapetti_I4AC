@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Add Phrase - Emotion Explorer{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Add a Phrase to an Emotion</h2>
+
+    <div class="card mx-auto" style="max-width: 500px;">
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('default.add_phrase') }}">
+                <div class="mb-3">
+                    <label for="emotion_id" class="form-label">Select Emotion</label>
+                    <select class="form-select" id="emotion_id" name="emotion_id" required>
+                        <option value="" disabled selected>Select an emotion</option>
+                        {% for emotion in emotions %}
+                            <option value="{{ emotion.id }}">{{ emotion.stato }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="frase" class="form-label">New Phrase</label>
+                    <textarea class="form-control" id="frase" name="frase" rows="3" placeholder="Write a phrase for this emotion..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Add Phrase</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

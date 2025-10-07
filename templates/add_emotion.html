@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Add Emotion - Emotion Explorer{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Add a New Emotion</h2>
+
+    <div class="card mx-auto" style="max-width: 500px;">
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('default.add_emotion') }}">
+                <div class="mb-3">
+                    <label for="stato" class="form-label">Emotion Name</label>
+                    <input type="text" class="form-control" id="stato" name="stato" placeholder="e.g. Joy, Anger, Serenity" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="frase" class="form-label">Associated Phrase</label>
+                    <textarea class="form-control" id="frase" name="frase" rows="3" placeholder="Write a phrase that reflects this emotion..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100 mb-3">Add Emotion</button>
+            </form>
+
+            <a href="{{ url_for('default.add_phrase') }}" class="btn btn-outline-primary w-100">Add Phrase to Existing Emotion</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

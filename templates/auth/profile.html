@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - Emotion Explorer{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Welcome {{ name }}!</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Name:</strong> {{ name }}</li>
+                        <li class="list-group-item"><strong>Email:</strong> {{ email }}</li>
+                        <li class="list-group-item"><strong>User ID:</strong> {{ id }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

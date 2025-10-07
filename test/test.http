@@ -1,0 +1,15 @@
+
+@hostname = localhost
+@port = 5000
+@host = {{hostname}}:{{port}}
+
+
+###form GET
+GET http://{{host}}/users HTTP/1.1
+
+###form GET
+GET http://{{host}}/umori HTTP/1.1
+
+###form GET
+GET http://{{host}}/frasi HTTP/1.1
+

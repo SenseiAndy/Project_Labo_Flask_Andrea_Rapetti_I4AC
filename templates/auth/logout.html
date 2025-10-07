@@ -1,0 +1,64 @@
+<!-- auth/logout.html -->
+{% extends "base.html" %}
+
+{% block title %}Logout - Emotion Explorer{% endblock %}
+
+{% block content %}
+<style>
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background: #f5f5f5;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(60, 60, 120, 0.10);
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 500px;
+}
+
+.logout-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ddd;
+}
+
+.logout-message {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 32px;
+}
+
+.logout-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #b0c4de;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.logout-btn:hover {
+    background: #0056b3;
+}
+</style>
+
+<div class="logout-container">
+    <h1 class="logout-title">Come Back Soon {{ name }}!</h1>
+    <div class="logout-message">
+        You are logged out.<br>
+        Thank you for exploring emotions with us.<br>
+        Come back anytime!
+    </div>
+    <a href="/" class="logout-btn">Back to HomePage</a>
+</div>
+{% endblock %}

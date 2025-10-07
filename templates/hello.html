@@ -1,0 +1,22 @@
+<!-- hello.html -->
+{% extends "base.html" %}
+
+{% block title %}Emotion Explorer{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card shadow-lg border-0">
+                <div class="card-body py-5">
+                    <img src="{{ url_for('static', filename='media/heart.svg') }}" alt="Heart Icon" width="80" class="mb-4">
+                    <h1 class="display-4 fw-bold mb-3 text-primary">Welcome!</h1>
+                    <p class="lead mb-4">We're glad to see you on this Web site.<br>
+                    Explore it and enjoy your stay!</p>
+                    <a href="{{ url_for('default.about') }}" class="btn btn-outline-primary btn-lg px-4">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Your Emotion - Emotion Explorer{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2 class="mb-4">You Selected:</h2>
+    <h3 class="mb-4">{{ emotion_name }}</h3>
+
+    <div class="d-flex justify-content-center mb-4">
+        <img src="{{ url_for('static', filename='media/mood/' ~ emotion_name ~ '.svg') }}" alt="{{ emotion_name }}" class="img-fluid" style="max-height: 300px;">
+    </div>
+
+    <div class="alert alert-info mx-auto" style="max-width: 600px;">
+        {{ phrase }}
+    </div>
+
+    <div class="mt-4">
+        <a href="{{ url_for('default.emotions_display') }}" class="btn btn-secondary">Choose Another Emotion</a>
+    </div>
+</div>
+{% endblock %}
